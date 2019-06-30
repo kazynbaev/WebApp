@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Авторизация</title>
+  <link rel="stylesheet" href="OnsenUI/css/onsenui.css">
+  <link rel="stylesheet" href="OnsenUI/css/onsen-css-components.min.css">
+  <script src="OnsenUI/js/onsenui.min.js"></script>
+  <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <script>
+      const login = () => {
+  const username = document.querySelector('#username').value;
+  const password = document.querySelector('#password').value;
+
+  //if (username === 'user' && password === 'pass') {
+    const navigator = document.querySelector('#navigator');
+    navigator.resetToPage('index.html');
+  //} else {
+   // ons.notification.alert('Неправильный логин/пароль', { title: 'Внимание!'});
+  //}
+}
+
+  </script>
+  <ons-navigator id="navigator">
+  <ons-page>
+    <div style="text-align: center; margin-top: 200px">
+    <p>
+    <ons-input id="username" placeholder="Логин" modifier="underbar"></ons-input>
+  </p>
+
+  <p>
+    <ons-input
+      id="password"
+      placeholder="Пароль"
+      type="password"
+      modifier="underbar"
+    >
+    </ons-input>
+  </p>
+
+  <p>
+    <ons-button onclick="login()">Авторизоваться</ons-button>
+  </p>
+    </div>
+
+  </ons-page>
+</ons-navigator>
+
+</body>
+</html>
